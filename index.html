@@ -9,6 +9,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -79,7 +80,73 @@
             </nav>
         </header>
 
-        <main class="main"></main>
+        <div class="content-wrap">
+            <section class="four-sections content-box">
+                <ul>
+                    <li>
+                        <a href="#" style="background-image: url(img/we_go_red.jpg)">
+                            <img src="img/we_go_red.jpg" alt="">
+                            <div class="title-wrap">
+                                <h2>Sistahs Go Red</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="background-image: url(img/we_go_red.jpg)">
+                            <img src="img/we_go_red.jpg" alt="">
+                            <div class="title-wrap">
+                                <h2>Kids Cook With Heart</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="background-image: url(img/we_go_red.jpg)">
+                            <img src="img/we_go_red.jpg" alt="">
+                            <div class="title-wrap">
+                                <h2>Simple Cooking With heart</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="background-image: url(img/we_go_red.jpg)">
+                            <img src="img/we_go_red.jpg" alt="">
+                            <div class="title-wrap">
+                                <h2>Saving Strokes</h2>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="programs-section content-box">
+                <div class="programs-list">
+                    <div>
+                        <a href="#"><img src="img/program_1.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/program_2.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/program_3.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/program_1.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/program_2.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/program_3.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/program_1.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/program_2.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="footer">
@@ -106,5 +173,32 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/scroll.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".programs-list").owlCarousel({
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplaySpeed: 500,
+                items: 3,
+                responsiveClass: true,
+                nav: false,
+                dots: false
+//                responsive: {
+//                    0: {
+//                        items: 1
+//                    },
+//                    600: {
+//                        items: 3
+//                    },
+//                    1000: {
+//                        items: 3
+//                    }
+                //}
+            });
+        });
+    </script>
+    <script src="js/mainJs.js"></script>
 </body>
 </html>
