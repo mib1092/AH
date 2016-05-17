@@ -4,8 +4,6 @@ $(document).ready(function() {
         var mainNav = $('#navbar'),
             headerHeight = $('.header-top-wrap').height();
 
-        console.log(headerHeight);
-
         if($(window).scrollTop() > headerHeight && !mainNav.hasClass('active-nav')) {
             mainNav.css({'position':'fixed', 'top':0, 'left':0});
         }
@@ -15,5 +13,9 @@ $(document).ready(function() {
 
         $('.nav-wrap').css({'height': mainNav.height()});
     });
+
+    // for pages with sidebar
+    var sidebarHeight = $('#sidebar').height();
+    $('.content-wrap').css({'min-height': sidebarHeight + 109});
 
 });

@@ -329,9 +329,11 @@ a.donate-btn {
 .content-wrap {
     background: #fff;
     padding-top: 50px;
+    padding-bottom: 40px;
 }
 .home .content-wrap {
     background-color: transparent;
+    padding-bottom: 0;
 }
 
 .four-sections {
@@ -419,12 +421,19 @@ a.donate-btn {
     padding-right: 2px;
     padding-left: 2px;
 }
-.programs-section .owl-item > div {
+.programs-section .owl-item > div,
+.programs-list li {
     display: table;
     width: 100%;
     padding-left: 16px;
 }
-.programs-section .owl-item a {
+.programs-list li {
+    padding-left: 0;
+    margin-bottom: 20px;
+    border-top: 1px solid #FAFAFA;
+}
+.programs-section .owl-item a,
+.programs-list li a {
     display: table-cell;
     width: 100%;
     height: 130px;
@@ -443,12 +452,14 @@ a.donate-btn {
     -moz-transition-duration: 0.2s;
     transition-duration: 0.2s;
 }
-.programs-section .owl-item a:hover {
+.programs-section .owl-item a:hover,
+.programs-list li a:hover {
     -webkit-box-shadow: 0 5px 15px rgba(217,216,215,1);
     -moz-box-shadow: 0 5px 15px rgba(217,216,215,1);
     box-shadow: 0 5px 15px rgba(217,216,215,1);
 }
-.programs-section .owl-item a img {
+.programs-section .owl-item a img,
+.programs-list li a img {
     max-width: 100%;
     max-height: 100%;
     height: auto;
@@ -530,10 +541,210 @@ a.donate-btn {
 .tel-item p {
     margin-top: 6px;
 }
+
+.content-wrap > .content-box {
+    position: relative;
+}
+.content {
+    position: relative;
+    overflow: hidden;
+    padding-right: 450px;
+}
+.page-title {
+    margin-bottom: 8px;
+    font-size: 32px;
+    font-weight: 700;
+}
+.post-info {
+    overflow: hidden;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #b5aca3;
+}
+.post-info li {
+    float: left;
+    margin-right: 15px;
+}
+.post-info li .fa {
+    margin-right: 3px;
+}
+.content p {
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+.content img {
+    max-width: 100%;
+    height: auto;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.content img.aligncenter{
+    display: block;
+    margin: 0 auto 40px;
+    clear: both;
+}
+.content img.aligncenter:not(:first-child) {
+    margin-top: 20px;
+}
+.content img.alignleft {
+    float: left;
+    max-width: 360px;
+    margin: 7px 30px 20px 0;
+}
+.content img.alignright {
+    float: right;
+    max-width: 360px;
+    margin: 7px 0 20px 28px;
+}
+.content h1 {
+    margin-top: 32px;
+    margin-bottom: 18px;
+    font-size: 28px;
+}
+.content h2 {
+    margin-top: 33px;
+    margin-bottom: 19px;
+    font-size: 26px;
+}
+.content h3 {
+    margin-top: 34px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.content h4 {
+    margin-top: 35px;
+    margin-bottom: 21px;
+    font-size: 22px;
+}
+.content h5 {
+    margin-top: 35px;
+    margin-bottom: 21px;
+    font-size: 20px;
+}
+.content h6 {
+    margin-top: 36px;
+    margin-bottom: 22px;
+    font-size: 18px;
+}
+.content ul {
+    padding: 0 0 0 18px;
+    margin: 0 0 38px;
+}
+.content ul li {
+    list-style: disc;
+    margin-bottom: 14px;
+    padding-left: 5px;
+}
+.content ol {
+    padding: 0;
+    margin: 0 0 38px;
+    counter-reset: item;
+}
+.content ol li {
+    margin-bottom: 14px;
+    list-style-type: none;
+    counter-increment: item;
+}
+.content ol li:before {
+    display: inline-block;
+    width: 23px;
+    font-weight: 700;
+    text-align: left;
+    content: counter(item) ".";
+}
+.content blockquote {
+    position: relative;
+    margin: 27px 0 40px;
+    padding: 98px 85px 17px;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    border: 2px solid #ECEAE8;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.content blockquote:before {
+    content: '';
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    width: 37px;
+    height: 30px;
+    margin-left: -18px;
+    background: url(../img/quote_icon.png) no-repeat center transparent;
+}
+.content blockquote p {
+    position: relative;
+    margin-bottom: 10px;
+}
+.content blockquote p strong:only-child {
+    position: relative;
+    display: inline-block;
+    padding-top: 25px;
+    margin-top: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+}
+.content blockquote p strong:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -40px;
+    height: 1px;
+    width: 80px;
+    background: #B5ACA3;
+}
+
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 420px;
+    padding: 4px 20px 0;
+}
+.widget {
+    margin-bottom: 34px;
+}
+.widget-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+.widget-title .fa {
+    margin-right: 1px;
+}
+.widget .featured-list {
+    padding-top: 0;
+    margin-top: -4px;
+    margin-bottom: -15px;
+}
+.widget .form-wrap .btn {
+    float: right;
+    margin-top: 20px;
+}
+.widget .contact-list {
+    display: table;
+    padding: 0;
+    margin-top: -4px;
+}
+.widget .contact-list li {
+    float: none;
+    width: auto;
+    display: table-cell;
+    padding: 0 0 0 20px;
+    vertical-align: top;
+}
+.widget .contact-list img {
+    margin-right: 15px;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
