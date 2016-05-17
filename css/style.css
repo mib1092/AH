@@ -49,10 +49,12 @@ a:hover                        { text-decoration:underline; }
 }
 .btn, a.btn {
     display: inline-block;
-    padding: 10px 32px 11px;
+    padding: 12px 32px;
     -webkit-border-radius: 5em;
     -moz-border-radius: 5em;
     border-radius: 5em;
+    border: none;
+    outline: none;
     background: #E02430;
     text-transform: uppercase;
     font-weight: 600;
@@ -76,6 +78,18 @@ button {
     transition: 0.2s;
 }
 
+.input-style {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 10px;
+    border: 2px solid #DEDEDD;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+}
 .input-style::-webkit-input-placeholder {
     color: #333;
     -webkit-transition: 0.25s;
@@ -123,6 +137,22 @@ img {
     margin: 0 auto;
     padding: 0 20px;
 }
+.half-box {
+    float: left;
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.section-title {
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+}
+.section-title .fa {
+    margin-right: 4px;
+}
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
@@ -145,6 +175,7 @@ img {
     background: #fff;
 }
 .header-top {
+    position: relative;
     overflow: hidden;
     padding-top: 30px;
     padding-bottom: 48px;
@@ -202,7 +233,13 @@ a.donate-btn {
 }
 
 /*--------------------------------------NAV-----------------------------------------*/
+.nav-wrap {
+    position: relative;
+    min-height: 90px;
+}
 .main-nav {
+    position: relative;
+    z-index: 999;
     width: 100%;
     background: #E02430;
     text-align: left;
@@ -418,6 +455,81 @@ a.donate-btn {
     width: auto;
     display: inline-block;
 }
+
+.additional-info-section {
+    overflow: hidden;
+    background: #FFF;
+    padding: 42px 0 57px;
+}
+.additional-info-section .content-box {
+    padding-left: 0;
+    padding-right: 0;
+}
+.form-wrap {
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    background: #F7F7F6;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.newsletter {
+    margin-bottom: 33px;
+}
+.newsletter .btn {
+    float: right;
+    margin-left: 10px;
+}
+.newsletter .input-style {
+    width: -webkit-calc(100% - 165px);
+    width: -moz-calc(100% - 165px);
+    width: calc(100% - 165px);
+}
+.featured-links {
+    margin-bottom: 18px;
+}
+.featured-list {
+    overflow: hidden;
+    margin-left: -20px;
+    padding-top: 5px;
+    /*-moz-column-count: 2;*/
+    /*-moz-column-gap: 20px;*/
+    /*-webkit-column-count: 2;*/
+    /*-webkit-column-gap: 20px;*/
+    /*column-count: 2;*/
+    /*column-gap: 20px;*/
+}
+.featured-list li {
+    margin-bottom: 10px;
+    float: left;
+    width: 50%;
+    padding-left: 20px;
+}
+.contact-list {
+    overflow: hidden;
+    padding-top: 14px;
+    margin-left: -20px;
+}
+.contact-list li {
+    overflow: hidden;
+    float: left;
+    width: 50%;
+    padding-left: 20px;
+}
+.contact-list img {
+    float: left;
+    margin-top: 5px;
+    margin-right: 12px;
+}
+.contact-list p {
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.tel-item p {
+    margin-top: 6px;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -431,23 +543,11 @@ a.donate-btn {
     z-index: 10;
     padding-top: 23px;
     padding-bottom: 20px;
-}
-.footer:before {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 5px;
-    background: #dfdedd;
-    background: -moz-linear-gradient(top, #dfdedd 0%, #fbf9f8 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, #dfdedd), color-stop(100%, #fbf9f8));
-    background: -webkit-linear-gradient(top, #dfdedd 0%, #fbf9f8 100%);
-    background: -o-linear-gradient(top, #dfdedd 0%, #fbf9f8 100%);
-    background: -ms-linear-gradient(top, #dfdedd 0%, #fbf9f8 100%);
-    background: linear-gradient(to bottom, #dfdedd 0%, #fbf9f8 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfdedd', endColorstr='#fbf9f8', GradientType=0 );
+    -moz-webkit-box-shadow: inset 0 2px 5px rgba(217,216,215,1);
+    -ms-webkit-box-shadow: inset 0 2px 5px rgba(217,216,215,1);
+    -o-webkit-box-shadow: inset 0 2px 5px rgba(217,216,215,1);
+    webkit-box-shadow: inset 0 2px 5px rgba(217,216,215,1);
+    box-shadow: inset 0 2px 5px rgba(217,216,215,1);
 }
 .footer-logo {
     float: left;
